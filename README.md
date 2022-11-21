@@ -36,6 +36,8 @@ We assign y as our label , ie our target.
 <br>
 We then make the heatmap. The heatmap is 24 images where each image has a 784 pixel combination. 
 <br><br>
+![image](https://user-images.githubusercontent.com/70460449/202991165-d83a4b87-a9c0-4cb0-8a31-b5c646130d23.png)
+
 
 Our data is not standardized, hence we are standardizing it.
 We do this using letter = preprocessing.scale(letter)

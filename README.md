@@ -1,5 +1,7 @@
 # ecs171_final_project
 
+Google Colab link: https://colab.research.google.com/drive/1TIVu0w7qDO1eshcImmZMPKGkFXgeYDpj?usp=sharing
+
 1. Create a GitHub ID
 
 2. Create a GitHub Repository (Public or Private it is up to you. In the end it will have to be Public)

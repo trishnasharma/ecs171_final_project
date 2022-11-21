@@ -28,12 +28,13 @@ We use plt.figure to plot a histogram to classify our data.
 <br><br>
 Our data is composed of images. Images that are 28x28 pixels. We have a total of 34627 samples of data. 
 <br><br>
-We assign y as our label , ie our target.
-<br><br>
-We then make the heatmap. The heatmap is 24 images where each image has a 784 pixel combination. 
-<br><br>
 We then plot the example classes before preprocessing. In order to do so, we drop the duplicates and display the images for each of the other labels.
 <br><br>
+We assign y as our label , ie our target.
+<br>
+We then make the heatmap. The heatmap is 24 images where each image has a 784 pixel combination. 
+<br><br>
+
 Our data is not standardized, hence we are standardizing it.
 We do this using letter = preprocessing.scale(letter)
 

@@ -2,56 +2,38 @@
 
 Google Colab link: https://colab.research.google.com/drive/1TIVu0w7qDO1eshcImmZMPKGkFXgeYDpj?usp=sharing
 
-1. Create a GitHub ID
+## Assignment 1 - Data exploration and preprocessing
 
-2. Create a GitHub Repository (Public or Private it is up to you. In the end it will have to be Public)
+1. Our data consists of training and test images separated.
+Our dataset from kaggle.
 
-3. Add me to your GitHub Repository (my id is esolares so that I can grade it)
+<t></t>*<u>Note:</u> Character 9 and 25 are not present since 9 - J and Z - 25 are not included since J and Z cannot be represented.*
 
-4. Perform the data exploration step (i.e. evaluate your data, # of observations, details about your data distributions, scales, missing data, column descriptions) Note: For image data you can still describe your data by the number of classes, # of images, size of images, are sizes standardized? do they need to be cropped? normalized? etc.
+2. First, We imported all the necessary libraries for the data exploration step.
+3. We import two different datasets - a train dataset and a test dataset.
+4. !wget - O outputs the url as a file, we do this individually with the train and test dataset.
+5. We obtain the df_train and df_test
+6. df_total is the concatenated version of train and test.
+7. We use plt.figure to plot a histogram to classify our data.
+8. Our data is composed of images. Images that are 28x28 pixels. We have a total of 34627 samples of data. 
+9. We then plot the example classes before preprocessing. In order to do so, we drop the duplicates and display the images for each of the other labels.
+10. We assign y as our label , ie our target.
+11. We then make the heatmap. The heatmap is 24 images where each image has a 784 pixel combination. 
+<img src="https://user-images.githubusercontent.com/70460449/202991165-d83a4b87-a9c0-4cb0-8a31-b5c646130d23.png" width="400"/>
 
-Our data consists of training and test images separated.
-
-*Character 9 and 25 are not present since 9 - J and Z - 25 are not included since J and Z cannot be represented.*
-
-First, we imported all the necessary libraries for the data exploration step.
-<br><br>
-We obtained our dataset from kaggle.
-<br><br>
-We import two different datasets - a train dataset and a test dataset.
-<br><br>
-!wget - O outputs the url as a file, we do this individually with the train and test dataset.
-<br><br>
-We obtain the df_train and df_test
-<br><br>
-df_total is the concatenated version of train and test.
-<br><br>
-We use plt.figure to plot a histogram to classify our data.
-<br><br>
-Our data is composed of images. Images that are 28x28 pixels. We have a total of 34627 samples of data. 
-<br><br>
-We then plot the example classes before preprocessing. In order to do so, we drop the duplicates and display the images for each of the other labels.
-<br><br>
-We assign y as our label , ie our target.
-<br>
-We then make the heatmap. The heatmap is 24 images where each image has a 784 pixel combination. 
-<br><br>
-![image](https://user-images.githubusercontent.com/70460449/202991165-d83a4b87-a9c0-4cb0-8a31-b5c646130d23.png)
+12. Our data is not standardized, hence we are standardizing it. We do this using letter = preprocessing.scale(letter)
 
 
-Our data is not standardized, hence we are standardizing it.
-We do this using letter = preprocessing.scale(letter)
+## Assignment 2 - First Model building and Evaluation
 
-5. Plot your data. For tabular data, you will need to run scatters, for image data, you will need to plot your example classes.
+1. We first used a label binarizer. The label column was replaced (which had values between 1 and 24) with a column for each letter which is a 1 if that entry is the letter that the column represents else 0.
+2. We first scale our pixel values by dividing each value by 255. ( Pixel values range from 0-255).
+3. We trained our first model with 1 hidden layer. The layer sizes were 100(input), 50(hidden), and 25(output).
+4. The activation functions used was the linear for the hidden layer and relu for the input and output.
+5. We trained for 10 epochs.
+6. We use model.predict to create y_pred_test using X_test.
+7. We evaluate our model next using classification report.
+8. We plot a graph for accuracy and loss visualization using matplotlib.
+9. As we see in the graph, we see an underfitting. Our model performs well on the training set but not on the test set.
 
-
-
-6. How will you preprocess your data? You should explain this in your Readme.MD file and link your jupyter notebook to it. Your jupyter notebook should be uploaded to your repo.
-
-
-
-7. Jupyter Notebook data download and environment setup requirements: 
-
-
-
-              !wget !unzip like functions as well as !pip install functions for non standard libraries not available in colab are required to be in the top section of your jupyter lab notebook. Please see HW2 & HW3 for examples.
+We seek to improve our model. Our next approach might be a NN with more layers. The cause for an underfitting maybe that the model is too simple.

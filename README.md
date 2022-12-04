@@ -48,7 +48,7 @@ We seek to improve our model. Our next approach might be a CNN with more layers.
  #### Data Exploration:
  Our data consists of training and test images separated from kaggle which were combined to train our model efficiently.
  The data is already formatted to closely match with the classic MNIST. Each image or row has label (0-25) indicating the letter it represents. However,   there are no case for letters J (Label 9) and Z (Label 25) because of the gesture motions. 
-<img src="https://user-images.githubusercontent.com/70460449/202991165-d83a4b87-a9c0-4cb0-8a31-b5c646130d23.png" width="400"/>
+<img src="https://github.com/hirenpateldotdev/ecs171_final_project/blob/main/Balanced%20Dataset.png?raw=true" width="400"/>
 2. First, We imported all the necessary libraries for the data exploration step.
 3. We import two different datasets - a train dataset and a test dataset.
 4. !wget - O outputs the url as a file, we do this individually with the train and test dataset.

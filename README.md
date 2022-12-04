@@ -45,8 +45,31 @@ We seek to improve our model. Our next approach might be a CNN with more layers.
 ### Figures:
 
 ### Methods:
- #### Data Exploration
+ #### Data Exploration:
+ Our data consists of training and test images separated from kaggle which were combined to train our model efficiently.
+ The data is already formatted to closely match with the classic MNIST. Each image or row has label (0-25) indicating the letter it represents. However,   there are no case for letters J (Label 9) and Z (Label 25) because of the gesture motions. 
 
+2. First, We imported all the necessary libraries for the data exploration step.
+3. We import two different datasets - a train dataset and a test dataset.
+4. !wget - O outputs the url as a file, we do this individually with the train and test dataset.
+5. We obtain the df_train and df_test
+6. df_total is the concatenated version of train and test.
+7. We use plt.figure to plot a histogram to classify our data.
+8. Our data is composed of images. Images that are 28x28 pixels. We have a total of 34627 samples of data. 
+9. We then plot the example classes before preprocessing. In order to do so, we drop the duplicates and display the images for each of the other labels.
+10. We assign y as our label , ie our target.
+11. We then make the heatmap. The heatmap is 24 images where each image has a 784 pixel combination. 
+<img src="https://user-images.githubusercontent.com/70460449/202991165-d83a4b87-a9c0-4cb0-8a31-b5c646130d23.png" width="400"/>
+
+12. Our data is not standardized, hence we are standardizing it. We do this using letter = preprocessing.scale(letter)
+
+
+#### Preprocessing:
+
+#### Model 1:
+
+#### Model 2:
+ 
 ### Results:
 
 ### Discussion Sections:

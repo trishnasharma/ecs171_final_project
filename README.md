@@ -40,19 +40,19 @@ We seek to improve our model. Our next approach might be a CNN with more layers.
 
 ## Final Submission
 
-# Introduction:
+### Introduction:
 
-# Figures:
+### Figures:
 
-## Methods:
- # Data Exploration
+### Methods:
+ #### Data Exploration
 
-# Results:
+### Results:
 
-# Discussion Sections:
+### Discussion Sections:
 
-# Conclusion:
+### Conclusion:
 
-# Collabration:
+### Collabration:
 
 

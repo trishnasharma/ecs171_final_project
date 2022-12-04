@@ -36,4 +36,23 @@ Our dataset from kaggle.
 8. We plot a graph for accuracy and loss visualization using matplotlib.
 9. As we see in the graph, we see an underfitting. Our model performs well on the training set but not on the test set.
 
-We seek to improve our model. Our next approach might be a NN with more layers. The cause for an underfitting maybe that the model is too simple.
+We seek to improve our model. Our next approach might be a CNN with more layers. The cause for an underfitting maybe that the model is too simple.
+
+##Final Submission:
+
+#Introduction:
+
+#Figures:
+
+##Methods:
+ #Data Exploration
+
+Results:
+
+Discussion Sections:
+
+Conclusion:
+
+Collabration:
+
+

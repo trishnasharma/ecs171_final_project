@@ -75,6 +75,16 @@ We trained our first model with 1 hidden layer. The layer sizes were 100(input),
 
 The model doesn’t perform well as the accuracy is only 71 %
 
+```
+model = Sequential()
+
+model.add(Dense(100, activation='relu'))
+model.add(Dense(50, activation='linear'))
+model.add(Dense(25, activation='relu'))
+
+model.add(Dense(classes, activation = 'softmax'))
+```
+
 <img src="https://github.com/hirenpateldotdev/ecs171_final_project/blob/main/images/m1_r.png?raw=true" width="800"/>
 
 The low accuracy rate was due to the model not being able to identify certain prominent features in the input images. When we flatten the image into a 1-D array, it has no sense of positions and scales invariant structure of the data. Ideally, we want the model to have a 2-D representation of the image where the prominent features are retained, and noise is dropped. Training the model on features would more accurately classify the image as there is less ambiguous information the model is learning from.

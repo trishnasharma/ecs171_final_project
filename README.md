@@ -93,6 +93,27 @@ The Stride is how much the filter is moved after each matrix multiplication. We 
 
 We also usually need to add padding to the image to ensure that the filter can be performed on the entire image. With our kernel size, we didn’t need to add padding around the image, as the features were all in the center.
 
+'''
+model2 = Sequential()
+
+
+model2.add(Conv2D(64, kernel_size=(3,3), activation='relu' , input_shape=(28,28,1)))
+model2.add(MaxPool2D(pool_size= (2,2)))
+
+model2.add(Conv2D(36, kernel_size=(3,3), activation='relu' ))
+
+
+model2.add(Flatten())
+model2.add(Dense(100, activation='relu'))
+model2.add(Dense(50, activation='linear'))
+model2.add(Dense(25, activation='relu'))
+
+model2.add(Dense(classes, activation = 'softmax'))
+
+model2.compile(optimizer = 'rmsprop', loss = 'binary_crossentropy',metrics=['accuracy'])
+result_2 = model2.fit(X_train, y_train, validation_data= (X_test, y_test), epochs = train_epochs, batch_size = train_batch_size )
+'''
+
 <img src="https://github.com/hirenpateldotdev/ecs171_final_project/blob/main/images/m2_r.png?raw=true" width="800"/>
 
 We were able to get an accuracy of 99.81%, which is highly accurate; thus, we were successful. 

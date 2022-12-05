@@ -63,6 +63,7 @@ The preprocessing only includes scaling the dataset since the data is already mo
 Scaling the dataset just includes dividing the pixel values by 255.
 
 Here is one case of each letter which has no gesture motion after scaling.
+
 <img src="https://github.com/hirenpateldotdev/ecs171_final_project/blob/main/scaled-letter.png?raw=true" width="400"/>
 
 #### Model 1:

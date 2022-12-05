@@ -46,7 +46,7 @@ We seek to improve our model. Our next approach might be a CNN with more layers.
 
 ### Methods:
  #### Data Exploration:
- Our data consists of training and test images separated which were combined to train our model efficiently. It was import from kaggle. The data is already formatted to closely match with the classic MNIST. Each image or row has label (A = 0 - Z = 25) indicating the letter it represents and a set of 789 pixel values between 0-255 representing 28x28 pixel grayscale image . However, there are no case for letters J (Label 9) and Z (Label 25) because of the gesture motions. Here are one case of each letter which has no gesture motion: 
+ Our data consists of training and test images separated which were combined to train our model efficiently. It was import from kaggle. The data is already formatted to closely match with the classic MNIST. Each image or row has label (A = 0 - Z = 25) indicating the letter it represents and a set of 789 pixel values between 0-255 representing 28x28 pixel grayscale image . However, there are no case for letters J (Label 9) and Z (Label 25) because of the gesture motions. Here is one case of each letter which has no gesture motion: 
  
  <img src="https://github.com/hirenpateldotdev/ecs171_final_project/blob/main/letters.png?raw=true" width="400"/>
  

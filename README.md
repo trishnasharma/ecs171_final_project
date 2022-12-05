@@ -60,7 +60,7 @@ The following heatmaps is created by overlapping cases of a letter to check the 
 #### Preprocessing:
 The preprocessing only includes scaling the dataset since the data is already modified.
 
-Scaling the dataset just includes dividing the pixel values by 255.
+Scaling the dataset includes dividing the pixel values by 255 to make it easy for the model to undeertand the learn.
 
 Here is one case of each letter which has no gesture motion after scaling.
 

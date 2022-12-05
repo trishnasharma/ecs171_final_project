@@ -52,9 +52,10 @@ We seek to improve our model. Our next approach might be a CNN with more layers.
  
  The American Sign Language MNIST dataset originally included only 1704 images which were cropped to include only hands, resized and then used to create 50+ variations to increse the dataset. Moreover, the dataset is already balance as seen in the bar graph, there are enough cases or images and also same amoutn of cases or images for each letters except for J and X.
 
-<img src="https://github.com/hirenpateldotdev/ecs171_final_project/blob/main/Balance%20Dataset.png?raw=true" width="400"/>
+<img src="https://github.com/hirenpateldotdev/ecs171_final_project/blob/main/images/Balance%20Dataset.png?raw=true" width="400"/>
 
 The following heatmaps is created by overlapping cases of a letter to check the similarities between the cases of a particular letter.
+
 <img src="https://user-images.githubusercontent.com/70460449/202991165-d83a4b87-a9c0-4cb0-8a31-b5c646130d23.png" width="400"/>
 
 #### Preprocessing:
@@ -64,7 +65,7 @@ Scaling the dataset includes dividing the pixel values by 255 to make it easy fo
 
 Here is one case of each letter which has no gesture motion after scaling.
 
-<img src="https://github.com/hirenpateldotdev/ecs171_final_project/blob/main/scaled-letter.png?raw=true" width="400"/>
+<img src="https://github.com/hirenpateldotdev/ecs171_final_project/blob/main/images/scaled-letter.png?raw=true" width="400"/>
 
 #### Model 1:
 

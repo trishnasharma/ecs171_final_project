@@ -50,7 +50,7 @@ We seek to improve our model. Our next approach might be a CNN with more layers.
  
  <img src="https://github.com/hirenpateldotdev/ecs171_final_project/blob/main/letters.png?raw=true" width="400"/>
  
- The American Sign Language MNIST dataset originally included only 1704 images which were cropped to include only hands, resized and then used to create 50+ variations to increse the dataset. Moreover, the dataset is already balance as seen in the bar graph, there are enough cases or images for each letters except for J and X.
+ The American Sign Language MNIST dataset originally included only 1704 images which were cropped to include only hands, resized and then used to create 50+ variations to increse the dataset. Moreover, the dataset is already balance as seen in the bar graph, there are enough cases or images and also same amoutn of cases or images for each letters except for J and X.
 
 <img src="https://github.com/hirenpateldotdev/ecs171_final_project/blob/main/Balance%20Dataset.png?raw=true" width="400"/>
 

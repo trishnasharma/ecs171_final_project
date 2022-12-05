@@ -93,7 +93,7 @@ The Stride is how much the filter is moved after each matrix multiplication. We 
 
 We also usually need to add padding to the image to ensure that the filter can be performed on the entire image. With our kernel size, we didn’t need to add padding around the image, as the features were all in the center.
 
-<img src="https://github.com/hirenpateldotdev/ecs171_final_project/blob/main/images/m2_r.png?raw=true" width="400"/>
+<img src="https://github.com/hirenpateldotdev/ecs171_final_project/blob/main/images/m2_r.png?raw=true" width="800"/>
 
 We were able to get an accuracy of 99.81%, which is highly accurate; thus, we were successful. 
 

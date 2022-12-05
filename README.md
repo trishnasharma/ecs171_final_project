@@ -46,7 +46,11 @@ We seek to improve our model. Our next approach might be a CNN with more layers.
 
 ### Methods:
  #### Data Exploration:
- Our data consists of training and test images separated which were combined to train our model efficiently. It was import from kaggle. The data is already formatted to closely match with the classic MNIST. Each image or row has label (A = 0 - Z = 25) indicating the letter it represents and a set of 789 pixel values between 0-255 representing 28x28 pixel grayscale image . However, there are no case for letters J (Label 9) and Z (Label 25) because of the gesture motions. The Sign Language MNIST dataset originally included only 1704 images which were cropped to include only hands, resized and then used to create 50+ variations to increse the dataset. Moreover, the dataset is already balance as seen in the bar graph, there are enough cases or images for each letters except for J and X.
+ Our data consists of training and test images separated which were combined to train our model efficiently. It was import from kaggle. The data is already formatted to closely match with the classic MNIST. Each image or row has label (A = 0 - Z = 25) indicating the letter it represents and a set of 789 pixel values between 0-255 representing 28x28 pixel grayscale image . However, there are no case for letters J (Label 9) and Z (Label 25) because of the gesture motions. Here are one case of each letter which has no gesture motion: 
+ 
+ <img src="https://github.com/hirenpateldotdev/ecs171_final_project/blob/main/letters.png?raw=true" width="400"/>
+ 
+ The Sign Language MNIST dataset originally included only 1704 images which were cropped to include only hands, resized and then used to create 50+ variations to increse the dataset. Moreover, the dataset is already balance as seen in the bar graph, there are enough cases or images for each letters except for J and X.
 
 <img src="https://github.com/hirenpateldotdev/ecs171_final_project/blob/main/Balance%20Dataset.png?raw=true" width="400"/>
 

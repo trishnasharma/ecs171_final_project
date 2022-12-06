@@ -165,4 +165,5 @@ We worked as a team and divided the tasks equalling among ourselves to complete 
 
 Bhavi Patel: worked on preprocessing, printing the image for each letter and on the models along with Hiren.
 Dorothy Le: Evaluated the models for its accuracy
+Hiren Patel: worked on creating data visualisation for the data exploration and implementing the various iteration of CNN models with Bhavi
 

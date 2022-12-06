@@ -43,11 +43,16 @@ We seek to improve our model. Our next approach might be a CNN with more layers.
 ### Introduction:
 Let’s talk about our project, an American Sign Language recognizer. American Sign Language (ASL) is a language expressed by hand and face movements. Sign language is an essential tool to bridge the communication gap between normal and hearing-impaired people. It is the primary language of many North Americans who are deaf and hard of hearing and is used by many hearing people. Sign Language interpreters interpret ASL in the English language, however, there is a scarcity of interpreters. Therefore, the need for a technology-based system is apparent. It is also a project for social good which is why it was chosen.
 
-### Figures:
+### Infographics:
+
+![download](https://user-images.githubusercontent.com/94094315/205823446-8a04257a-189d-4ac6-ae2a-0b652788fa4e.png)
+
+![SL Infographic Population](https://user-images.githubusercontent.com/94094315/205823214-a1240b95-0be2-47f6-9c42-4bf960f33002.jpeg)
 
 Here is a flowchart to show the process of using Machine Learning to identify the hand signs:
 
 ![ecs171 drawio](https://user-images.githubusercontent.com/94094315/205795433-c77bdafe-5731-468f-b5fa-22bd19af9518.png)
+
 
 
 ### Methods and Results:
@@ -184,7 +189,7 @@ Bhavi Patel: worked on preprocessing, printing the image for each letter and on 
 
 Dorothy Le: Evaluated the models for its accuracy
 
-Shivam Bhandari: Worked on the introduction of the project and worked on updating README with trishna.
+Shivam Bhandari: Worked on the introduction of the project and worked on updating README with trishna and the infographics.
 
 Hiren Patel: worked on creating data visualisation for the data exploration and implementing the various iteration of CNN models with Bhavi
 

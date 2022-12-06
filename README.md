@@ -136,5 +136,7 @@ We were able to get an accuracy of 99.81%, which is highly accurate; thus, we we
 We did a neural network analysis on hand signs from the MNIST kaggle dataset. Before building the actual model we did a bunch of data processing and preprocessing on the datasets. We then built a very basic model with a few layers and modified that to our final model which gave us the best accuracy. We ended up with an accuracy of: 99.8%. Overall we enjoyed brainstorming about different ideas and ML projects to work on and found this one to be very interesting. In the future we could probably try a dataset with different images, for example taking the picture in different lightings and experimenting with that to see if we can train the model better.
 
 ### Collabration:
+We worked as a team and divided the tasks equalling among ourselves to complete the assignment.
+Bhavi Patel: worked on preprocessing, printing the image for each letter and on the models along with Hiren.
 
 

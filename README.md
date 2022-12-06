@@ -41,6 +41,7 @@ We seek to improve our model. Our next approach might be a CNN with more layers.
 ## Final Submission
 
 ### Introduction:
+ Let’s talk about our project, an American Sign Language recognizer. American Sign Language (ASL) is a language that is expressed by movements of the hands and face. It is the primary language of many North Americans who are deaf and hard of hearing, and is used by many hearing people as well. The advantages of such a program are numerous. We chose it because of it’s applications for social good. It is also a classifier porgram which is something we wanted to experiment with.
 
 ### Figures:
 

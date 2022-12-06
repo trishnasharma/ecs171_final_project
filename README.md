@@ -41,13 +41,11 @@ We seek to improve our model. Our next approach might be a CNN with more layers.
 ## Final Submission
 
 ### Introduction:
- Let’s talk about our project, an American Sign Language recognizer. American Sign Language (ASL) is a language that is expressed by movements of the hands and face. It is the primary language of many North Americans who are deaf and hard of hearing, and is used by many hearing people as well. The advantages of such a program are numerous. We chose it because of it’s applications for social good. It is also a classifier porgram which is something we wanted to experiment with.
+Let’s talk about our project, an American Sign Language recognizer. American Sign Language (ASL) is a language expressed by hand and face movements. Sign language is an essential tool to bridge the communication gap between normal and hearing-impaired people. It is the primary language of many North Americans who are deaf and hard of hearing and is used by many hearing people. Sign Language interpreters interpret ASL in the English language, however, there is a scarcity of interpreters. Therefore, the need for a technology-based system is apparent. It is also a project for social good which is why it was chosen.
 
 ### Figures:
 
-### Introduction
-
-Let’s talk about our project, an American Sign Language recognizer. American Sign Language (ASL) is a language expressed by hand and face movements. Sign language is an essential tool to bridge the communication gap between normal and hearing-impaired people. It is the primary language of many North Americans who are deaf and hard of hearing and is used by many hearing people. Sign Language interpreters interpret ASL in the English language, however, there is a scarcity of interpreters. Therefore, the need for a technology-based system is apparent. It is also a project for social good which is why it was chosen.
+Here is a flowchart to show the process of using Machine Learning to identify the hand signs:
 
 ![ecs171 drawio](https://user-images.githubusercontent.com/94094315/205795433-c77bdafe-5731-468f-b5fa-22bd19af9518.png)
 
@@ -101,6 +99,15 @@ model.add(Dense(25, activation='relu'))
 
 model.add(Dense(classes, activation = 'softmax'))
 ```
+These are the results for Model 1
+
+Fitting the model with our data:
+
+<img src="https://github.com/hirenpateldotdev/ecs171_final_project/blob/main/images/m1_r.png?raw=true" width="800"/>
+
+Accuracy and Loss Model Complexity graph for training and testing data:
+
+<img src="https://github.com/hirenpateldotdev/ecs171_final_project/blob/main/images/m1_g.png?raw=true" width="800"/>
 
 The model doesn’t perform well as the accuracy is only 72.6 %
 
@@ -141,25 +148,6 @@ model2.compile(optimizer = 'rmsprop', loss = 'binary_crossentropy',metrics=['acc
 result_2 = model2.fit(X_train, y_train, validation_data= (X_test, y_test), epochs = train_epochs, batch_size = train_batch_size )
 ```
 
-
-We were able to get an accuracy of 99.81%, which is highly accurate; thus, we were successful.
-
-### Results
-#### Model 1:
-These are the results for Model 1
-
-Fitting the model with our data:
-
-<img src="https://github.com/hirenpateldotdev/ecs171_final_project/blob/main/images/m1_r.png?raw=true" width="800"/>
-
-Accuracy and Loss Model Complexity graph for training and testing data:
-
-<img src="https://github.com/hirenpateldotdev/ecs171_final_project/blob/main/images/m1_g.png?raw=true" width="800"/>
-
-The model doesn’t perform well as the accuracy is only 72.6 %
-
-
-#### Model 2:
 These are the results for Model 2
 
 Fitting the model with our data:
@@ -171,6 +159,7 @@ Accuracy and Loss Model Complexity graph for training and testing data:
 <img src="https://github.com/hirenpateldotdev/ecs171_final_project/blob/main/images/m2_g.png?raw=true" width="800"/>
 
 We were able to get an accuracy of 99.81%, which is highly accurate; thus, we were successful.
+
 
 ### Discussion Sections:
 #### Data Exploration

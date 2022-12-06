@@ -1,7 +1,7 @@
 # ecs171_final_project
 
-Google Colab link: https://colab.research.google.com/drive/1TIVu0w7qDO1eshcImmZMPKGkFXgeYDpj?usp=sharing
-https://colab.research.google.com/github/hirenpateldotdev/ecs171_final_project/blob/main/main.ipynb
+Google Colab link: https://colab.research.google.com/github/hirenpateldotdev/ecs171_final_project/blob/main/main.ipynb
+
 ## Assignment 1 - Data exploration and preprocessing
 
 1. Our data consists of training and test images separated.

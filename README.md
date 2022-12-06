@@ -49,20 +49,27 @@ We seek to improve our model. Our next approach might be a CNN with more layers.
  #### Data Exploration:
  The data consists of training and test images separated which were combined to train our model efficiently. It was import from kaggle. The data is already formatted to closely match with the classic MNIST and consists 34627 images. Each image or row has label (A = 0 - Z = 25) indicating the letter it represents and a set of 789 pixel values between 0-255 representing 28x28 pixel grayscale image . However, there are no case for letters J (Label 9) and Z (Label 25) because of the gesture motions. Here is one case of each letter which has no gesture motion: 
  
+ Getting the datasets and exploring data: https://colab.research.google.com/drive/1TV3me4j5mHQLCVA9t7au2VRPObpdV590?authuser=1#scrollTo=SmEfQ8uSxfL6
+
  <img src="https://github.com/hirenpateldotdev/ecs171_final_project/blob/main/images/letters.png?raw=true" width="400"/>
  
  The American Sign Language MNIST dataset originally included only 1704 images which were cropped to include only hands, resized and then used to create 50+ variations to increse the dataset. Moreover, the dataset is already balance as seen in the bar graph, there are enough cases or images and also same amoutn of cases or images for each letters except for J and X.
+
+ Data Description and Example Classes: https://colab.research.google.com/drive/1TV3me4j5mHQLCVA9t7au2VRPObpdV590?authuser=1#scrollTo=BySowk5m_h5P
 
 <img src="https://github.com/hirenpateldotdev/ecs171_final_project/blob/main/images/Balance%20Dataset.png?raw=true" width="400"/>
 
 The following heatmaps is created by overlapping cases of a letter to check the similarities between the cases of a particular letter.
 
+Heat Map: https://colab.research.google.com/drive/1TV3me4j5mHQLCVA9t7au2VRPObpdV590?authuser=1#scrollTo=573brVfm44rC
+
 <img src="https://user-images.githubusercontent.com/70460449/202991165-d83a4b87-a9c0-4cb0-8a31-b5c646130d23.png" width="400"/>
 
 #### Preprocessing:
 The preprocessing only includes scaling the dataset since the data is already modified.
-
 Scaling the dataset includes dividing the pixel values by 255 to make it easy for the model to undeertand the learn.
+
+Preprocessing: https://colab.research.google.com/drive/1TV3me4j5mHQLCVA9t7au2VRPObpdV590?authuser=1#scrollTo=eJuUYflGNGMY
 
 Here is one case of each letter which has no gesture motion after scaling.
 

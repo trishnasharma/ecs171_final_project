@@ -76,7 +76,7 @@ Here is one case of each letter which has no gesture motion after scaling.
 <img src="https://github.com/hirenpateldotdev/ecs171_final_project/blob/main/images/scaled-letter.png?raw=true" width="400"/>
 
 #### Model 1:
-In our first model, the neural network flattens the image into a 1-D array for the input. 
+In our first model, the neural network flattens the image into a 1-D array for the input.
 We trained our first model with 1 hidden layer. The layer sizes were 100(input), 50(hidden), and 25(output). The activation functions used were linear for the hidden layer and ReLu for the input and output. We trained for 10 epochs.
 
 <img src="https://github.com/hirenpateldotdev/ecs171_final_project/blob/main/images/m1_d.png?raw=true" width="400"/>
@@ -95,15 +95,20 @@ model.add(Dense(classes, activation = 'softmax'))
 
 The model doesn’t perform well as the accuracy is only 71 %
 
+These are the results for Model 1
+
+<img src="https://github.com/hirenpateldotdev/ecs171_final_project/blob/main/images/m1_g.png?raw=true" width="800"/>
+
 The low accuracy rate was due to the model not being able to identify certain prominent features in the input images. When we flatten the image into a 1-D array, it has no sense of positions and scales invariant structure of the data. Ideally, we want the model to have a 2-D representation of the image where the prominent features are retained, and noise is dropped. Training the model on features would more accurately classify the image as there is less ambiguous information the model is learning from.
 
 #### Model 2:
 
-Convolution Neural Network processes the pixel values from the input images. The input images are processed by multiplying a matrix filter over the image. Once we are done with the convolution layer, we create a 2-D pool layer by applying a function to sections of the convolution. 
+Convolution Neural Network processes the pixel values from the input images. The input images are processed by multiplying a matrix filter over the image. Once we are done with the convolution layer, we create a 2-D pool layer by applying a function to sections of the convolution.
 
 <img src="https://github.com/hirenpateldotdev/ecs171_final_project/blob/main/images/m2_d.png?raw=true" width="400"/>
 
-We have a pooling layer of size 3x3 as we have 2 convolutions. The first convolution has 64 layers, and the second one has 36 layers. If we used fewer convolution layers, we wouldn’t be able to identify prominent features causing a lower accuracy rate. 
+We have a pooling layer of size 3x3 as we have 2 convolutions. The first convolution has 64 layers, and the second one has 36 layers. If we used fewer convolution layers, we wouldn’t be able to identify prominent features causing a lower accuracy rate. m1_g
+
 
 In our project, as the images aren’t large, we use a kernel size of  3 x 3 matrix as the filter. Using a filter, we can extract features from an image, such as vertical and horizontal lines, which can be overlooked when we flatten the input image into a 1-D array. This filer matrix is iterated over the entire image, and the result from the matrix multiplication is added to a corresponding matrix.
 
@@ -133,9 +138,11 @@ result_2 = model2.fit(X_train, y_train, validation_data= (X_test, y_test), epoch
 
 <img src="https://github.com/hirenpateldotdev/ecs171_final_project/blob/main/images/m2_r.png?raw=true" width="800"/>
 
-We were able to get an accuracy of 99.81%, which is highly accurate; thus, we were successful. 
+We were able to get an accuracy of 99.81%, which is highly accurate; thus, we were successful.
 
+These are the results for Model 2
 
+<img src="https://github.com/hirenpateldotdev/ecs171_final_project/blob/main/images/m2_g.png?raw=true" width="800"/>
 
 ### Discussion Sections:
 #### Data Exploration

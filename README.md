@@ -45,6 +45,13 @@ We seek to improve our model. Our next approach might be a CNN with more layers.
 
 ### Figures:
 
+### Introduction
+
+Let’s talk about our project, an American Sign Language recognizer. American Sign Language (ASL) is a language expressed by hand and face movements. Sign language is an essential tool to bridge the communication gap between normal and hearing-impaired people. It is the primary language of many North Americans who are deaf and hard of hearing and is used by many hearing people. Sign Language interpreters interpret ASL in the English language, however, there is a scarcity of interpreters. Therefore, the need for a technology-based system is apparent. It is also a project for social good which is why it was chosen.
+
+![ecs171 drawio](https://user-images.githubusercontent.com/94094315/205795433-c77bdafe-5731-468f-b5fa-22bd19af9518.png)
+
+
 ### Methods and Results:
  #### Data Exploration:
  The data consists of training and test images separated which were combined to train our model efficiently. It was import from kaggle. The data is already formatted to closely match with the classic MNIST and consists 34627 images. Each image or row has label (A = 0 - Z = 25) indicating the letter it represents and a set of 789 pixel values between 0-255 representing 28x28 pixel grayscale image . However, there are no case for letters J (Label 9) and Z (Label 25) because of the gesture motions.

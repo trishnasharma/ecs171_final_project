@@ -138,6 +138,17 @@ We were able to get an accuracy of 99.81%, which is highly accurate; thus, we we
 
 
 ### Discussion Sections:
+#### Data Exploration
+When choosing our dataset, we decided on the Sign Language MNIST datasets from Kaggle since it was a trusted source to get reliable data and it’s important to have good data to build an accurate model. Since there were 24 alphabets in the dataset, we used 24 classes to represent each and had our model classify into those classes. 
+
+#### Preprocessing
+To distinguish between the different classes, we used a heat map to analyze the dark and light spots of the images and to use those spots to identify the hand signs from it. The heat map was the best tool to understand the shape of each gesture. Then, we used a label binarizer which changed the label column from values of 1 - 24 to 0 - 1. It would be 1 if the entry matched the letter and 0 otherwise. The label binarizer is a standard for classification problems since it makes it easier for the model to train. 
+
+#### Model 1
+When making our model, we initially flattened the image into a 1D array and used that as input for our first model. And we chose the activation function by experimenting with the model and seeing which ones worked the best. However, that didn’t perform as well with an accuracy of 71%, and this inaccuracy can be attributed to its inability to identify distinguishing features between the images. From the graph, our model performed well with the training data but not the test, which are signs of underfitting. 
+
+#### Model 2
+To improve our model, we made our second model be a CNN with more layers. We trained it with a 2D representation of the images, so that it kept those distinguishing features, leading to more accurate results. We also chose to do a CNN instead since it would process the images without losing its prominent features and give accurate predictions. After evaluating our CNN model, we got an accuracy of 99.81%, and we were finally pleased with our model. In conclusion, we used trial and error to find our final model. With complex data like images, a more complex model is needed, and we didn’t realize this until our first simple model wasn’t as accurate. This made us seek for different machine learning models specialized for image classification and CNN was perfect for that. We also experimented with the convolution layers and their activation functions to perfect our model. 
 
 ### Conclusion:
 We did a neural network analysis on hand signs from the MNIST kaggle dataset. Before building the actual model we did a bunch of data processing and preprocessing on the datasets. We then built a very basic model with a few layers and modified that to our final model which gave us the best accuracy. We ended up with an accuracy of: 99.8%. Overall we enjoyed brainstorming about different ideas and ML projects to work on and found this one to be very interesting. In the future we could probably try a dataset with different images, for example taking the picture in different lightings and experimenting with that to see if we can train the model better.

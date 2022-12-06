@@ -91,13 +91,7 @@ model.add(Dense(25, activation='relu'))
 model.add(Dense(classes, activation = 'softmax'))
 ```
 
-<img src="https://github.com/hirenpateldotdev/ecs171_final_project/blob/main/images/m1_r.png?raw=true" width="800"/>
-
 The model doesn’t perform well as the accuracy is only 72.6 %
-
-These are the results for Model 1
-
-<img src="https://github.com/hirenpateldotdev/ecs171_final_project/blob/main/images/m1_g.png?raw=true" width="800"/>
 
 The low accuracy rate was due to the model not being able to identify certain prominent features in the input images. When we flatten the image into a 1-D array, it has no sense of positions and scales invariant structure of the data. Ideally, we want the model to have a 2-D representation of the image where the prominent features are retained, and noise is dropped. Training the model on features would more accurately classify the image as there is less ambiguous information the model is learning from.
 
@@ -136,13 +130,32 @@ model2.compile(optimizer = 'rmsprop', loss = 'binary_crossentropy',metrics=['acc
 result_2 = model2.fit(X_train, y_train, validation_data= (X_test, y_test), epochs = train_epochs, batch_size = train_batch_size )
 ```
 
-<img src="https://github.com/hirenpateldotdev/ecs171_final_project/blob/main/images/m2_r.png?raw=true" width="800"/>
 
 We were able to get an accuracy of 99.81%, which is highly accurate; thus, we were successful.
 
+### Results
+#### Model 1:
+These are the results for Model 1
+
+Fitting the model with our data:
+<img src="https://github.com/hirenpateldotdev/ecs171_final_project/blob/main/images/m1_r.png?raw=true" width="800"/>
+
+Accuracy and Loss Model Complexity graph for training and testing data:
+<img src="https://github.com/hirenpateldotdev/ecs171_final_project/blob/main/images/m1_g.png?raw=true" width="800"/>
+
+The model doesn’t perform well as the accuracy is only 72.6 %
+
+
+#### Model 2:
 These are the results for Model 2
 
+Fitting the model with our data:
+<img src="https://github.com/hirenpateldotdev/ecs171_final_project/blob/main/images/m2_r.png?raw=true" width="800"/>
+
+Accuracy and Loss Model Complexity graph for training and testing data:
 <img src="https://github.com/hirenpateldotdev/ecs171_final_project/blob/main/images/m2_g.png?raw=true" width="800"/>
+
+We were able to get an accuracy of 99.81%, which is highly accurate; thus, we were successful.
 
 ### Discussion Sections:
 #### Data Exploration

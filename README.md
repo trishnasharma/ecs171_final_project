@@ -184,7 +184,8 @@ Bhavi Patel: worked on preprocessing, printing the image for each letter and on 
 
 Dorothy Le: Evaluated the models for its accuracy
 
+Shivam Bhandari: Worked on the introduction of the project and worked on updating README with trishna.
+
 Hiren Patel: worked on creating data visualisation for the data exploration and implementing the various iteration of CNN models with Bhavi
 
 Trishna Sharma: Worked on creating figures, graphs, and added explanations to the code to Google Colab and worked on updating README with Shivam and the team.
-

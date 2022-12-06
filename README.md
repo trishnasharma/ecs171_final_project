@@ -137,6 +137,7 @@ We did a neural network analysis on hand signs from the MNIST kaggle dataset. Be
 
 ### Collabration:
 We worked as a team and divided the tasks equalling among ourselves to complete the assignment.
+
 Bhavi Patel: worked on preprocessing, printing the image for each letter and on the models along with Hiren.
 
 

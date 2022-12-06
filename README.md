@@ -47,15 +47,19 @@ We seek to improve our model. Our next approach might be a CNN with more layers.
 
 ### Methods and Results:
  #### Data Exploration:
- The data consists of training and test images separated which were combined to train our model efficiently. It was import from kaggle. The data is already formatted to closely match with the classic MNIST and consists 34627 images. Each image or row has label (A = 0 - Z = 25) indicating the letter it represents and a set of 789 pixel values between 0-255 representing 28x28 pixel grayscale image . However, there are no case for letters J (Label 9) and Z (Label 25) because of the gesture motions. Here is one case of each letter which has no gesture motion: 
+ The data consists of training and test images separated which were combined to train our model efficiently. It was import from kaggle. The data is already formatted to closely match with the classic MNIST and consists 34627 images. Each image or row has label (A = 0 - Z = 25) indicating the letter it represents and a set of 789 pixel values between 0-255 representing 28x28 pixel grayscale image . However, there are no case for letters J (Label 9) and Z (Label 25) because of the gesture motions.
  
  Getting the datasets and exploring data: https://colab.research.google.com/drive/1TV3me4j5mHQLCVA9t7au2VRPObpdV590?authuser=1#scrollTo=SmEfQ8uSxfL6
 
+ Here is one case of each letter which has no gesture motion: 
+ 
  <img src="https://github.com/hirenpateldotdev/ecs171_final_project/blob/main/images/letters.png?raw=true" width="400"/>
  
  The American Sign Language MNIST dataset originally included only 1704 images which were cropped to include only hands, resized and then used to create 50+ variations to increse the dataset. Moreover, the dataset is already balance as seen in the bar graph, there are enough cases or images and also same amoutn of cases or images for each letters except for J and X.
 
  Data Description and Example Classes: https://colab.research.google.com/drive/1TV3me4j5mHQLCVA9t7au2VRPObpdV590?authuser=1#scrollTo=BySowk5m_h5P
+
+The dataset seems balanced as there are enough and almost same cases for each letters without gesture motion.
 
 <img src="https://github.com/hirenpateldotdev/ecs171_final_project/blob/main/images/Balance%20Dataset.png?raw=true" width="400"/>
 
@@ -138,9 +142,11 @@ We were able to get an accuracy of 99.81%, which is highly accurate; thus, we we
 These are the results for Model 1
 
 Fitting the model with our data:
+
 <img src="https://github.com/hirenpateldotdev/ecs171_final_project/blob/main/images/m1_r.png?raw=true" width="800"/>
 
 Accuracy and Loss Model Complexity graph for training and testing data:
+
 <img src="https://github.com/hirenpateldotdev/ecs171_final_project/blob/main/images/m1_g.png?raw=true" width="800"/>
 
 The model doesn’t perform well as the accuracy is only 72.6 %
@@ -150,9 +156,11 @@ The model doesn’t perform well as the accuracy is only 72.6 %
 These are the results for Model 2
 
 Fitting the model with our data:
+
 <img src="https://github.com/hirenpateldotdev/ecs171_final_project/blob/main/images/m2_r.png?raw=true" width="800"/>
 
 Accuracy and Loss Model Complexity graph for training and testing data:
+
 <img src="https://github.com/hirenpateldotdev/ecs171_final_project/blob/main/images/m2_g.png?raw=true" width="800"/>
 
 We were able to get an accuracy of 99.81%, which is highly accurate; thus, we were successful.
@@ -174,11 +182,13 @@ To improve our model, we made our second model be a CNN with more layers. We tra
 We did a neural network analysis on hand signs from the MNIST kaggle dataset. Before building the actual model we did a bunch of data processing and preprocessing on the datasets. We then built a very basic model with a few layers and modified that to our final model which gave us the best accuracy. We ended up with an accuracy of: 99.8%. Overall we enjoyed brainstorming about different ideas and ML projects to work on and found this one to be very interesting. In the future we could probably try a dataset with different images, for example taking the picture in different lightings and experimenting with that to see if we can train the model better.
 
 ### Collabration:
-We worked as a team and divided the tasks equalling among ourselves to complete the assignment.
+We worked as a team and divided the tasks equally among ourselves to complete the assignment.
 
 Bhavi Patel: worked on preprocessing, printing the image for each letter and on the models along with Hiren.
 
 Dorothy Le: Evaluated the models for its accuracy
 
 Hiren Patel: worked on creating data visualisation for the data exploration and implementing the various iteration of CNN models with Bhavi
+
+Trishna Sharma: Worked on creating figures, graphs, and added explanations to the code to Google Colab and worked on updating README with Shivam and the team.
 

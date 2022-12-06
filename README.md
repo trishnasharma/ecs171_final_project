@@ -44,7 +44,7 @@ We seek to improve our model. Our next approach might be a CNN with more layers.
 
 ### Figures:
 
-### Methods:
+### Methods and Results:
  #### Data Exploration:
  The data consists of training and test images separated which were combined to train our model efficiently. It was import from kaggle. The data is already formatted to closely match with the classic MNIST and consists 34627 images. Each image or row has label (A = 0 - Z = 25) indicating the letter it represents and a set of 789 pixel values between 0-255 representing 28x28 pixel grayscale image . However, there are no case for letters J (Label 9) and Z (Label 25) because of the gesture motions. Here is one case of each letter which has no gesture motion: 
  
@@ -127,8 +127,7 @@ result_2 = model2.fit(X_train, y_train, validation_data= (X_test, y_test), epoch
 
 We were able to get an accuracy of 99.81%, which is highly accurate; thus, we were successful. 
 
- 
-### Results:
+
 
 ### Discussion Sections:
 

@@ -29,7 +29,16 @@ Here is a flowchart to show the process of using Machine Learning to identify th
  
  The American Sign Language MNIST dataset originally included only 1704 images which were cropped to include only hands, resized and then used to create 50+ variations to increse the dataset. Moreover, the dataset is already balance as seen in the bar graph, there are enough cases or images and also same amoutn of cases or images for each letters except for J and X.
 
- Data Description and Example Classes: https://colab.research.google.com/drive/1TV3me4j5mHQLCVA9t7au2VRPObpdV590?authuser=1#scrollTo=BySowk5m_h5P
+ ```
+df = pd.concat([df_train,df_test])
+display(df.shape)
+display(df.describe())
+
+
+plt.figure(figsize = (10,10)) # Label Count
+sns.set_style("darkgrid")
+sns.countplot(x=df["label"])
+```
 
 The dataset seems balanced as there are enough and almost same cases for each letters without gesture motion.
 
@@ -37,7 +46,43 @@ The dataset seems balanced as there are enough and almost same cases for each le
 
 The following heatmaps is created by overlapping cases of a letter to check the similarities between the cases of a particular letter.
 
-Heat Map: https://colab.research.google.com/drive/1TV3me4j5mHQLCVA9t7au2VRPObpdV590?authuser=1#scrollTo=573brVfm44rC
+```
+y = df['label']
+x = df.values
+
+sizeOfImg = 784
+totalLetters = 24
+heatmaps = [[0 for pixel in range(sizeOfImg)] for letter in range(totalLetters)]
+
+lableCount = [0]* totalLetters
+
+
+for k in range(1000):
+    row = (df.loc[[k]].values.flatten().tolist())
+    label = row[0] - 1
+    lableCount[label] += 1
+    for i in range(1,sizeOfImg):  
+        heatmaps[label][i] = heatmaps[label][i] + row[i]
+
+for k in range(len(lableCount)):
+    print(k, " = " ,lableCount[k], " images")
+    if (lableCount[k] != 0):
+        label = k
+        for i in range(sizeOfImg):
+            heatmaps[k][i] = heatmaps[k][i] / lableCount[label]
+
+figureHM, axisHM = plt.subplots(nrows=6, ncols=4, figsize=(15,15),)
+
+import cv2
+
+k = 0
+for rowsHM in range(6):
+    for columnsHM in range(4):
+        if (lableCount[k] != 0):
+            imgHM = np.reshape(heatmaps[k], (28,28))
+            axisHM[rowsHM][columnsHM].imshow(imgHM)
+        k+=1
+```
 
 <img src="https://user-images.githubusercontent.com/70460449/202991165-d83a4b87-a9c0-4cb0-8a31-b5c646130d23.png" width="400"/>
 
@@ -45,7 +90,18 @@ Heat Map: https://colab.research.google.com/drive/1TV3me4j5mHQLCVA9t7au2VRPObpdV
 The preprocessing only includes scaling the dataset since the data is already modified.
 Scaling the dataset includes dividing the pixel values by 255 to make it easy for the model to undeertand the learn.
 
-Preprocessing: https://colab.research.google.com/drive/1TV3me4j5mHQLCVA9t7au2VRPObpdV590?authuser=1#scrollTo=eJuUYflGNGMY
+```
+labels = df.label
+images = df.iloc[: , 1:]
+
+labels = label_binarizer.fit_transform(labels)
+
+#getting all the letters
+letter = df.drop_duplicates(subset = ["label"])
+letter = letter.sort_values("label")
+letter = letter.drop(columns = ["label"])
+letter = letter/255
+```
 
 Here is one case of each letter which has no gesture motion after scaling.
 
@@ -143,16 +199,3 @@ To improve our model, we made our second model be a CNN with more layers. We tra
 
 ### Conclusion:
 We did a neural network analysis on hand signs from the MNIST kaggle dataset. Before building the actual model we did a bunch of data processing and preprocessing on the datasets. We then built a very basic model with a few layers and modified that to our final model which gave us the best accuracy. We ended up with an accuracy of: 99.8%. Overall we enjoyed brainstorming about different ideas and ML projects to work on and found this one to be very interesting. In the future we could probably try a dataset with different images, for example taking the picture in different lightings and experimenting with that to see if we can train the model better.
-
-### Collabration:
-We worked as a team and divided the tasks equally among ourselves to complete the assignment.
-
-Bhavi Patel: worked on preprocessing, printing the image for each letter and on the models along with Hiren.
-
-Dorothy Le: Evaluated the models for its accuracy
-
-Shivam Bhandari: Worked on the introduction of the project and worked on updating README with trishna and the infographics.
-
-Hiren Patel: worked on creating data visualisation for the data exploration and implementing the various iteration of CNN models with Bhavi
-
-Trishna Sharma: Worked on creating figures, graphs, and added explanations to the code to Google Colab and worked on updating README with Shivam and the team.

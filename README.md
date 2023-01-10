@@ -1,6 +1,6 @@
 # Hand Sign Detection 
 
-Google Colab link: https://colab.research.google.com/github/hirenpateldotdev/ecs171_final_project/blob/main/main.ipynb
+Google Colab link: https://colab.research.google.com/drive/18AsNvzsJdcYjQ5Qu-QhfoD6RYLqWD6TJ?authuser=1#scrollTo=6t9x_geE4W9e
 
 ### Introduction:
 Let’s talk about our project, an American Sign Language recognizer. American Sign Language (ASL) is a language expressed by hand and face movements. Sign language is an essential tool to bridge the communication gap between normal and hearing-impaired people. It is the primary language of many North Americans who are deaf and hard of hearing and is used by many hearing people. Sign Language interpreters interpret ASL in the English language, however, there is a scarcity of interpreters. Therefore, the need for a technology-based system is apparent. It is also a project for social good which is why it was chosen.
